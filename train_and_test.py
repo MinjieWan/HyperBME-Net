@@ -601,10 +601,7 @@ def main():
                     # scio.savemat(name, {'truth': truth, 'pred': pred, 'psnr_list': psnr_all, 'ssim_list': ssim_all})
                     checkpoint(model, ema, optimizer, scheduler, epoch, model_path, logger)
             
-            
-    
-
-
+        
 if __name__ == '__main__':
     main()
 
