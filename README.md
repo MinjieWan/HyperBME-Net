@@ -102,19 +102,23 @@ python train_and_test.py --train_phase 2  --test_mode 1  --template hyper --outf
 
 ---
 
-## 📦 Pre-trained Model
+## 📦 Pre-trained Models
 
-We provide the pre-trained model in the `checkpoints/` directory:
+The pre-trained model is not included in this repository due to its large file size.
+
+Please download the pre-trained weight manually and place it in the following directory:
 
 ```
 checkpoints/
 └── HyperBME.pth
 ```
 
-Please load the pre-trained model when testing:
+- Pre-trained model:https://pan.baidu.com/s/1uKuvb7nLneJdJBRa_2seFQ?pwd=s36j 
+
+When testing, please set `--resume_ckpt_path` to the corresponding weight path:
 
 ```
-python train_and_test.py --train_phase 2  --test_mode 1  --template hyper --outf ./exp/hyper_test/ --method hyper --stage 3 --body_share_params 0 --resume_ckpt_path ./checkpoints/HyperBME.pth --gpu_id 1
+--resume_ckpt_path ./checkpoints/HyperBME.pth
 ```
 ---
 ## ⚠️ Notes
