@@ -274,7 +274,7 @@ def log_model_complexity(logger):
         msg = f"Model Complexity | FLOPs: {format_count(total_flops)} | Params: {total_params / 1e6:.3f} M"
 
     except Exception as e:
-        msg = f"Model Complexity | FLOPs统计失败: {e} | Params: {total_params / 1e6:.3f} M"
+        msg = f"Model Complexity | FLOPs calculation failed: {e} | Params: {total_params / 1e6:.3f} M"
 
     print(msg)
     logger.info(msg)
@@ -346,7 +346,7 @@ def train(epoch, logger, scaler):
             format(epoch, train_loss, lr*10e3, (end - begin)))
     
     
-    print(f"[Epoch {epoch}] 训练后 GPU显存: {torch.cuda.memory_allocated()/1024**3:.2f} GB")
+    print(f"[Epoch {epoch}] GPU memory after training: {torch.cuda.memory_allocated()/1024**3:.2f} GB")
     
     
     return train_loss
