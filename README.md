@@ -50,6 +50,8 @@ Here, `test/` is used as the validation set, while `final_test/` is used as the 
 
 ```
 HyperBME-Net/
+├── checkpoints/
+│   └── HyperBME.pth
 ├── architecture/        # network architecture
 ├── datasets/            # dataset structure
 ├── exp/                 # experiment outputs and checkpoints
@@ -100,6 +102,21 @@ python train_and_test.py --train_phase 2  --test_mode 1  --template hyper --outf
 
 ---
 
+## 📦 Pre-trained Model
+
+We provide the pre-trained model in the `checkpoints/` directory:
+
+```
+checkpoints/
+└── HyperBME.pth
+```
+
+Please load the pre-trained model when testing:
+
+```
+python train_and_test.py --train_phase 2  --test_mode 1  --template hyper --outf ./exp/hyper_test/ --method hyper --stage 3 --body_share_params 0 --resume_ckpt_path ./checkpoints/HyperBME.pth --gpu_id 1
+```
+---
 ## ⚠️ Notes
 
 - Please place the `.mat` files according to the expected dataset structure.
