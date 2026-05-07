@@ -24,6 +24,7 @@ lpips==0.1.4
 ## 📂 Dataset
 
 The full dataset and mask file are not included in this repository due to their large file size.  
+
 Please download them manually and place them in the following structure.
 
 `test/` is used as the validation set, while `final_test/` is used as the final test set.
@@ -124,5 +125,4 @@ When testing, please set `--resume_ckpt_path` to the corresponding weight path:
 ## ⚠️ Notes
 
 - Please place the `.mat` files according to the expected dataset structure.
-- The `exp/` folder is used to save training logs, checkpoints, and testing results.
 
