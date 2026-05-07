@@ -8,7 +8,7 @@ Please prepare the mask file manually and place it in this directory before trai
 Expected structure:
 
 ```text
-ZWH_train_test/
+train_test/
 ├── Mask_HyperspecI_V1.mat
 ├── train/
 ├── test/
