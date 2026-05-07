@@ -12,7 +12,7 @@ parser.add_argument('--template', default='mst',
 parser.add_argument("--gpu_id", type=str, default='0,1,2,3')
 
 # Data specifications
-parser.add_argument('--data_root', type=str, default='/home/nvidia/zhuwh/6.23/datasets', help='dataset directory')
+parser.add_argument('--data_root', type=str, default='./datasets', help='dataset directory')
 
 # Saving specifications
 parser.add_argument('--outf', type=str, default='./exp/mst_s/', help='saving_path')
@@ -55,10 +55,10 @@ opt = parser.parse_known_args()[0]
 template.set_template(opt)
 
 # dataset
-opt.data_path = f"{opt.data_root}/ZWH_train_test/train/"
-opt.mask_path = f"{opt.data_root}/ZWH_train_test/"
-opt.test_path = f"{opt.data_root}/ZWH_train_test/test/"
-opt.final_test_path = f"{opt.data_root}/ZWH_train_test/final_test/"
+opt.data_path = f"{opt.data_root}/train_test/train/"
+opt.mask_path = f"{opt.data_root}/train_test/"
+opt.test_path = f"{opt.data_root}/train_test/test/"
+opt.final_test_path = f"{opt.data_root}/train_test/final_test/"
 for arg in vars(opt):
     if vars(opt)[arg] == 'True':
         vars(opt)[arg] = True
