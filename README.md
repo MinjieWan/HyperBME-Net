@@ -26,6 +26,8 @@ lpips==0.1.4
 The full dataset and mask file are not included in this repository due to their large file size.  
 Please download them manually and place them in the following structure.
 
+`test/` is used as the validation set, while `final_test/` is used as the final test set.
+
 - Dataset:https://pan.baidu.com/s/1l975wOK5E-5ieS_8e4HzIA?pwd=fpkk
 - Mask file:https://pan.baidu.com/s/1-kp-qXgSs16RKaY8vs-VyQ?pwd=2ps6
 
@@ -42,8 +44,6 @@ datasets/
     │   └── *.mat
     └── Mask_HyperspecI_V1.mat
 ```
-
-Here, `test/` is used as the validation set, while `final_test/` is used as the final test set.
 ---
 
 ## 📁 Project Structure
