@@ -73,7 +73,7 @@ HyperBME-Net/
 #### 1st Phase
 
 ```
-python train_and_test.py --train_phase 1  --clip_grad --batch_size 64 --template hyper --outf ./exp/hyper__1st/ --method hyper --stage 3 --body_share_params 0 
+python train_and_test.py --train_phase 1  --clip_grad --batch_size 60 --template hyper --outf ./exp/hyper__1st/ --method hyper --stage 3 --body_share_params 0 
 ```
 ### Debug Mode
 
@@ -82,7 +82,7 @@ You can add `--debug 1` to quickly check whether the code runs correctly with a 
 Example:
 
 ```
-python train_and_test.py --train_phase 1  --clip_grad --batch_size 64 --template hyper --outf ./exp/hyper__1st/ --method hyper --stage 3 --body_share_params 0 --debug 1
+python train_and_test.py --train_phase 1  --clip_grad --batch_size 60 --template hyper --outf ./exp/hyper__1st/ --method hyper --stage 3 --body_share_params 0 --debug 1
 ```
 
 #### 2nd Phase
@@ -90,7 +90,7 @@ python train_and_test.py --train_phase 1  --clip_grad --batch_size 64 --template
 Please modify `--resume_ckpt_path` before running the second training phase.
 
 ```
-python train_and_test.py --train_phase 2  --clip_grad --batch_size 56 --template hyper --outf ./exp/hyper_2nd/ --resume_ckpt_path ./exp/hyper_1st/model/model_epoch_xxx.pth --method hyper --stage 3 --body_share_params 0 
+python train_and_test.py --train_phase 2  --clip_grad --batch_size 52 --template hyper --outf ./exp/hyper_2nd/ --resume_ckpt_path ./exp/hyper_1st/model/model_epoch_xxx.pth --method hyper --stage 3 --body_share_params 0 
 ```
 
 ### Testing
