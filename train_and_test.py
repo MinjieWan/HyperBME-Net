@@ -207,7 +207,6 @@ flops_input_size2 = (60,128,128)
 flops_input_size = (128,128)
 
 # Log model complexity, including FLOPs and parameter count.
-# If FLOPs calculation fails, parameter count is still reported.
 def maybe_sync():
     if device.type == 'cuda':
         torch.cuda.synchronize()
